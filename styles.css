@@ -1,0 +1,261 @@
+:root {
+    --logo-color: #B99095;
+    --link-color: #868B8E;
+    --link-hover: #B9B7BD;
+    --bg-color: #FFFCED;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--bg-color);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: var(--bg-color);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo h1 {
+    color: var(--logo-color);
+    margin-left: 1rem;
+    font-size: 1.5rem;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+    margin: 0 auto;
+}
+
+.nav-item {
+    color: var(--link-color);
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.nav-item:hover {
+    color: var(--link-hover);
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: var(--bg-color);
+    min-width: 200px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+    border-radius: 4px;
+    padding: 0.5rem 0;
+}
+
+.dropdown-content a {
+    color: var(--link-color);
+    text-decoration: none;
+    display: block;
+    padding: 0.5rem 1rem;
+    transition: color 0.3s ease;
+    list-style: none;
+}
+
+.dropdown-content a:hover {
+    color: var(--link-hover);
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.nav-icons {
+    display: flex;
+    gap: 1.5rem;
+    margin-right: 1rem;
+}
+
+.icon {
+    color: var(--link-color);
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+.icon:hover {
+    color: var(--link-hover);
+}
+
+.sidebar-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--link-color);
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 80%;
+    max-width: 300px;
+    height: 100vh;
+    background-color: var(--bg-color);
+    box-shadow: -2px 0 4px rgba(0, 0, 0, 0.1);
+    transition: right 0.3s ease;
+    z-index: 2000;
+    padding: 1rem;
+}
+
+.sidebar.active {
+    right: 0;
+}
+
+.sidebar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    padding: 0 0.5rem;
+}
+
+.sidebar-header .logo {
+    font-size: 1.2rem;
+    color: var(--logo-color);
+}
+
+.close-sidebar {
+    background: none;
+    border: none;
+    color: var(--link-color);
+    font-size: 1.2rem;
+    cursor: pointer;
+    padding: 0.5rem;
+    margin-left: 2rem;
+    transition: color 0.3s ease;
+}
+
+.close-sidebar:hover {
+    color: var(--link-hover);
+}
+
+.sidebar-links {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.sidebar-item {
+    color: var(--link-color);
+    text-decoration: none;
+    font-size: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 0;
+}
+
+.sidebar-dropdown-content {
+    display: none;
+    padding-left: 1rem;
+}
+
+.sidebar-dropdown-content.active {
+    display: block;
+}
+
+.sidebar-dropdown-content a {
+    color: var(--link-color);
+    text-decoration: none;
+    display: block;
+    padding: 0.5rem 0;
+    list-style: none;
+}
+
+.sidebar-footer {
+    position: absolute;
+    bottom: 2rem;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    padding: 1rem;
+}
+
+.sidebar-footer .icon {
+    font-size: 1.2rem;
+    padding: 0.5rem;
+}
+
+@media screen and (max-width: 1180px) {
+    .nav-links {
+        display: none;
+    }
+    
+    .sidebar-toggle {
+        display: block;
+    }
+
+    .nav-icons .icon:nth-child(2),
+    .nav-icons .icon:nth-child(3),
+    .nav-icons .icon:nth-child(4) {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1368px) {
+    .nav-item {
+        font-size: 0.9rem;
+    }
+    
+    .nav-links {
+        gap: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    .nav-links {
+        gap: 1rem;
+    }
+}
+
+@media screen and (width: 1024px) and (height: 600px) {
+    .nav-links {
+        display: flex;
+        gap: 0.8rem;
+    }
+
+    .nav-item {
+        font-size: 0.85rem;
+    }
+
+    .sidebar-toggle {
+        display: none;
+    }
+
+    .nav-icons .icon:nth-child(2),
+    .nav-icons .icon:nth-child(3),
+    .nav-icons .icon:nth-child(4) {
+        display: inline-block;
+    }
+}
