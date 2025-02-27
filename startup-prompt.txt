@@ -1,0 +1,28 @@
+Create a modern e-commerce clothing website using HTML, CSS, JS The navbar should include the following features:
+
+1. Logo: On the left side, display the text "The Naari House" with no image, just text. Set a margin of 1rem from the left side.
+   
+2. Navigation Links: In the center, include the following dropdown menu items: "New Arrivals", "Co-Ord Sets", "Western Wear", "Winter Wear", and "Sale". When hovered over, the dropdown menu should open .
+
+3. Icons on the Right: Include search, cart, profile, and digital mirror icons with equal spacing in between. The icon section should have a 1rem margin from the right side.
+
+4. Responsive Layout: On smaller devices, place the logo on the left side with a 1rem margin from the left. On the right, place the search, cart, and sidebar icons, with a 1rem margin on the right side.
+
+5. Sidebar: On clicking the sidebar icon, the logo will appear on the top left corner, with links underneath. Clicking these links should open a dropdown menu in a tree structure. At the bottom, display the user and digital mirror icons in a single row .
+
+6. Colors: Define the following colors:
+   - Logo: #B99095
+   - Links: #868B8E, Hover: #B9B7BD
+   - Icons: #868B8E, Hover: #B9B7BD
+   - Background: #FFFCED
+
+7. Additional Styles: Add a black drop shadow to the navbar. No borders should be visible anywhere.
+
+8. Icons: Use FontAwesome CDN for icons.
+9.  split the code into different files. 
+10.Add all nav links 
+11.sidebar show on mobile screen only 
+12.No bullet show in drop down links  
+13.820*1180,912*1368,853*1280, Hide nav links in give screen devices and apply properly
+
+This prompt should generate unique outputs each time when used. Let me know if you need any changes!
